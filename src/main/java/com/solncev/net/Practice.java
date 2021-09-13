@@ -10,6 +10,7 @@ import java.net.URLConnection;
 
 public class Practice {
     public static void main(String[] args) {
+        HttpClientImpl httpClient = new HttpClientImpl();
         try {
             URL url = new URL("http://jsonplaceholder.typicode.com/posts?userId=1");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -45,10 +46,13 @@ public class Practice {
             URLConnection connection2= testUrl.openConnection();
             connection2.setRequestProperty("Cont", "ohef");
             System.out.println(connection2.getContent());
+
+            //httpClient.get("https://postman-echo.com/get", )
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }
