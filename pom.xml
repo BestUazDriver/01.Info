@@ -13,6 +13,25 @@
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
+    <plugins>
+    <plugin>
+        ...
+        <configuration>
+            <user>myUser</user>
+            <password>mySecretPwd</password>
+            <schemas>
+                <schema>schema1</schema>
+                <schema>schema2</schema>
+                <schema>schema3</schema>
+            </schemas>
+            <placeholders>
+                <keyABC>valueXYZ</keyABC>
+                <otherplaceholder>value123</otherplaceholder>
+            </placeholders>
+        </configuration>
+    </plugin>
+    </plugins>
+
     <dependencies>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
